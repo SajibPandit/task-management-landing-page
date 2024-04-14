@@ -1,0 +1,33 @@
+.scroll-container {
+  overflow-x: hidden;
+}
+
+.scroll-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* animation: scrollAnimation 10s linear infinite; */
+}
+/* 
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+} */
+
+.scroll-col {
+  /* flex: 0 0 auto; */
+  margin-right: 20px; /* Adjust as needed */
+  text-align: center;
+}
+.scroll-col:last-child {
+  margin-right: 0px;
+}
+
+.brand-icon {
+  width: auto;
+  height: 50px; /* Adjust as needed */
+}
