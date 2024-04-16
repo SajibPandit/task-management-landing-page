@@ -1,17 +1,28 @@
 import { Container } from "react-bootstrap";
+import SocialLinks from "./SocialLinks";
+import { BiLogoMagento } from "react-icons/bi";
 
 function Footer() {
   return (
-    <Container
-      fluid
-      className="d-flex justify-content-center align-items-center"
-      style={{
-        height: "10vh",
-        backgroundColor: "#F8F9FA",
-      }}
-    >
-      <p className="text-center">Copyright &copy;2024. All Rights Reserved</p>
-    </Container>
+    <div style={{
+      minHeight: "10vh",
+      padding: '20px 0px',
+      backgroundColor: "#F8F9FA",
+    }}>
+      <Container
+        className="footer"
+
+      >
+        <div>
+          <div><BiLogoMagento className="footer-logo" /></div>
+          <p className="text-center">Copyright &copy;2024. All Rights Reserved</p>
+        </div>
+
+        <div>
+          <SocialLinks />
+        </div>
+      </Container>
+    </div>
   );
 }
 

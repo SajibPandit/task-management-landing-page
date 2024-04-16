@@ -4,9 +4,46 @@ import Tabs from "react-bootstrap/Tabs";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Row, Col, FloatingLabel } from 'react-bootstrap'
+import Form from 'react-bootstrap/Form';
+import FilterMenu from "./FilterMenu";
 
 function Tasks() {
   const [key, setKey] = useState("home");
+  const [filter, setFilter] = useState('');
+
+  const handleFilterSelect = (option) => {
+    setFilter(option);
+  };
+
+
+  const data = [
+    {
+      id: 1,
+      title: 'Most Popular',
+      key: 'mostPopular'
+    }, {
+      id: 2,
+      title: 'Popular',
+      key: 'popular'
+    }, {
+      id: 3,
+      title: 'Likes',
+      key: 'likes'
+    }, {
+      id: 4,
+      title: 'Comments',
+      key: 'comments'
+    }, {
+      id: 5,
+      title: 'Subscribe',
+      key: 'subscribe'
+    }, {
+      id: 6,
+      title: 'Posts',
+      key: 'posts'
+    },
+  ]
 
   return (
     <Container
@@ -22,33 +59,104 @@ function Tasks() {
           className="text-center"
           fill
         >
-          <Tab eventKey="home" title="Home">
+          <Tab eventKey="facebook" title="Facebook">
             <Card className="my-2">
-              <Card.Header>Featured</Card.Header>
-              <Card.Body>
-                <Card.Title>Tab content for Home</Card.Title>
-                <Card.Text>
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
+              <Row>
+                <Col style={{ padding: '20px' }} md={3}>
+                  {/* <Form.Select aria-label="Default select example">
+                    <option>Filter Options</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </Form.Select> */}
 
-            <Card className="my-2">
-              <Card.Header>Featured</Card.Header>
-              <Card.Body>
-                <Card.Title>Tab content for Home</Card.Title>
-                <Card.Text>
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
+
+
+
+                  {/* <FloatingLabel controlId="floatingSelect" label="Filter Options">
+                    <Form.Select aria-label="Floating label select example">
+                      <option>Select</option>
+
+                      {data.map((d, i) => (
+                        <option index={i} value={d.key}>{d.title}</option>
+                      ))}
+                    </Form.Select>
+                  </FloatingLabel> */}
+                  <label className="menu-label">Filter Options:</label>
+
+                  <FilterMenu
+                    options={['Most Popular', 'Popular Likes', 'Comments', 'Subscribe', 'Views', 'Linkes']}
+                    onSelect={handleFilterSelect}
+                  />
+                </Col>
+                <Col md={8}>
+                  <Row>
+                    <Col md={6}>
+                      <Card className="m-2">
+                        <Card.Body>
+                          <Card.Title>Tab content for Home</Card.Title>
+                          <Card.Text>
+                            With supporting text below as a natural lead-in to additional
+                            content.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                    <Col md={6}>
+                      <Card className="m-2">
+                        <Card.Body>
+                          <Card.Title>Tab content for Home</Card.Title>
+                          <Card.Text>
+                            With supporting text below as a natural lead-in to additional
+                            content.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+
+                    <Col md={6}>
+                      <Card className="m-2">
+                        <Card.Body>
+                          <Card.Title>Tab content for Home</Card.Title>
+                          <Card.Text>
+                            With supporting text below as a natural lead-in to additional
+                            content.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+
+                    <Col md={6}>
+                      <Card className="m-2">
+                        <Card.Body>
+                          <Card.Title>Tab content for Home</Card.Title>
+                          <Card.Text>
+                            With supporting text below as a natural lead-in to additional
+                            content.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+
+                    <Col md={6}>
+                      <Card className="m-2">
+                        <Card.Body>
+                          <Card.Title>Tab content for Home</Card.Title>
+                          <Card.Text>
+                            With supporting text below as a natural lead-in to additional
+                            content.
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  </Row>
+
+                </Col>
+              </Row>
             </Card>
           </Tab>
 
-          <Tab eventKey="profile" title="Profile">
+          <Tab eventKey="youtube" title="YouTube">
             <Card className="my-2">
               <Card.Header>Featured</Card.Header>
               <Card.Body>
@@ -61,7 +169,7 @@ function Tasks() {
               </Card.Body>
             </Card>
           </Tab>
-          <Tab eventKey="contact" title="Contact">
+          <Tab eventKey="instagram" title="Instagram">
             <Card className="my-2">
               <Card.Header>Featured</Card.Header>
               <Card.Body>
@@ -74,6 +182,18 @@ function Tasks() {
               </Card.Body>
             </Card>
           </Tab>
+
+          <Tab eventKey="twitter" title="Twitter">
+
+          </Tab>
+          <Tab eventKey="linkedIn" title="LinkedIn">
+
+          </Tab>
+          <Tab eventKey="links" title="Links">
+
+          </Tab>
+
+
         </Tabs>
       </div>
     </Container>
