@@ -9,7 +9,7 @@ import Form from 'react-bootstrap/Form';
 import FilterMenu from "./FilterMenu";
 
 function Tasks() {
-  const [key, setKey] = useState("home");
+  const [key, setKey] = useState("facebook");
   const [filter, setFilter] = useState('');
 
   const handleFilterSelect = (option) => {
@@ -17,7 +17,7 @@ function Tasks() {
   };
 
 
-  const data = [
+  const filterMenus = [
     {
       id: 1,
       title: 'Most Popular',
