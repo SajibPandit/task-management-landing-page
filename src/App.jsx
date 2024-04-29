@@ -6,6 +6,9 @@ import Home from "./components/Home";
 import Tasks from "./components/Tasks";
 import React, { useState, useEffect } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import { Route, Routes } from 'react-router-dom';
+import Signup from "./components/Signup";
+import Page from "./components/Page";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,18 +39,27 @@ function App() {
     });
   };
 
+  // const Home = () => <h1>Home Page</h1>
+  const About = () => <h1>About Page</h1>
+
   return (
     <>
-      <Header />
-      <Home />
-      <Brands />
+
+      {/* <Routes>
+        <Route exact path="/" component={<Home />} />
+        <Route path="/about" component={<About />} />
+      </Routes> */}
+      {/* <Header />
+      <Home /> */}
+      <Page/>
+      {/* <Brands />
       <Tasks />
-      <Footer />
-      {isVisible && (
+      <Footer /> */}
+      {/* {isVisible && (
         <button className="scroll-to-top-button" onClick={scrollToTop}>
           <FaArrowCircleUp className="arrow-icon" />
         </button>
-      )}
+      )} */}
     </>
   );
 }

@@ -1,0 +1,22 @@
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    scroll-snap-align: start;
+    transition: 1s;
+}
+
+.container-div {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section:nth-child(odd){
+    background-color: blanchedalmond;
+}
+
+section:last-child{
+    height: 300px;
+}

@@ -1,6 +1,17 @@
 .scroll-container {
   overflow-x: hidden;
 }
+*{
+  scroll-behavior: smooth;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
 
 .scroll-row {
   display: flex;
@@ -143,4 +154,20 @@
 
 .arrow-icon {
   font-size: 24px;
+}
+
+/* .snap-container{
+  scroll-snap-type: y mandatory;
+}
+
+.child{
+  scroll-snap-align: start;
+} */
+
+footer{
+  background-color: #f5f7fa;
+}
+
+.footer-top-links a{
+  margin: 0 20px;
 }
