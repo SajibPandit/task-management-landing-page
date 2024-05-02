@@ -10,12 +10,9 @@ function Page() {
         <>
             <div className='container-div'>
                 <section>
-                    <Container>
+                    <Container className='mx-auto'>
                         <Row>
-                            <Col md={6} className="text-center">
-                                <Image src={Connector} className="img-fluid" rounded />
-                            </Col>
-                            <Col md={6} className="text-center d-flex justify-content-center align-items-center flex-column">
+                            <Col md={6} className="text-center  flex-column">
                                 <h1>Effortless Task Management for Teams and Individuals</h1>
                                 <p>
                                     Effortless task management for teams and individuals, streamline
